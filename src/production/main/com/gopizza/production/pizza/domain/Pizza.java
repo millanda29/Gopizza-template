@@ -7,9 +7,13 @@ import com.gopizza.shared.domain.pizza.PizzaIngredient;
 import com.gopizza.shared.domain.pizza.PizzaIngredientsMapper;
 import com.gopizza.shared.domain.pizza.PizzaSize;
 import com.gopizza.shared.domain.pizza.PizzaType;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "pizzas")
 public class Pizza {
 
+    @Id
     private String id;
     private String orderId;
     private PizzaType type;
@@ -34,6 +38,10 @@ public class Pizza {
         this.ingredients = ingredients;
         this.creationTimeMinutes = creationTimeMinutes;
         this.createdAt = createdAt;
+    }
+
+    // Constructor vacío requerido por MongoDB
+    public Pizza() {
     }
 
     public static Pizza create(
