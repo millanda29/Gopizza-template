@@ -1,34 +1,33 @@
 package com.gopizza.ordering.order.infrastructure;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
+import lombok.AllArgsConstructor;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.gopizza.ordering.order.domain.Order;
 import com.gopizza.ordering.order.domain.OrderRepository;
 
 @Repository
-public class InmemoryOrderRepository implements OrderRepository {
+@AllArgsConstructor
+public class MongoOrderRepository implements OrderRepository {
 
-    private final Map<String, Order> orders = new ConcurrentHashMap<>();
+    private final MongoTemplate mongoTemplate;
 
     @Override
     public Order save(Order order) {
-        orders.put(order.id(), order);
-        return order;
+        return mongoTemplate.save(order);
     }
 
     @Override
     public Order search(String id) {
-        return orders.get(id);
+        return mongoTemplate.findById(id, Order.class);
     }
 
     @Override
     public List<Order> searchAll() {
-        return new ArrayList<>(orders.values());
+        return mongoTemplate.findAll(Order.class);
     }
 
 }
