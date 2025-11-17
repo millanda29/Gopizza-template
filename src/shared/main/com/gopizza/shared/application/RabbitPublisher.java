@@ -23,7 +23,7 @@ public class RabbitPublisher {
             var json = mapper.writeValueAsString(event);
             template.convertAndSend("order.created", json);
         } catch (JsonProcessingException e) {
-            System.out.println("error processing event: " + e.getMessage());
+            System.err.println("Error Publicando OrderCreatedEvent: " + e.getMessage());
         }
     }
 
@@ -32,7 +32,7 @@ public class RabbitPublisher {
             var json = mapper.writeValueAsString(event);
             template.convertAndSend("pizza.created", json);
         } catch (JsonProcessingException e) {
-            System.out.println("error processing event: " + e.getMessage());
+            System.err.println("Error Publicando PizzaCreatedEvent: " + e.getMessage());
         }
     }
 
@@ -41,7 +41,7 @@ public class RabbitPublisher {
             var json = mapper.writeValueAsString(event);
             template.convertAndSend("order.completed", json);
         } catch (JsonProcessingException e) {
-            System.out.println("error processing event: " + e.getMessage());
+            System.err.println("Error Publicando OrderCompletedEvent: " + e.getMessage());
         }
     }
 
