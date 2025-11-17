@@ -52,9 +52,9 @@ public class CreatePizzaUseCase {
 
     private int calculatePreparationTimeSeconds(PizzaSize size) {
         return switch (size) {
-            case SMALL -> 3;   // 3 segundos
-            case MEDIUM -> 5;  // 5 segundos  
-            case LARGE -> 8;   // 8 segundos
+            case SMALL -> 2;   // 2 segundos
+            case MEDIUM -> 4;  // 4 segundos  
+            case LARGE -> 6;   // 6 segundos
         };
     }
 
