@@ -1,0 +1,35 @@
+server:
+  port: 8082
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27027/gopizza
+
+  rabbitmq:
+    host: localhost
+    port: 5677
+    username: admin
+    password: admin
+
+  kafka:
+    bootstrap-servers: localhost:9097
+
+vaadin:
+  launch-browser: true
+  exclude-urls:
+    - /swagger-ui/**
+    - /v3/api-docs/**
+    - /swagger-ui.html/**
+    - /swagger-resources/**
+    - /webjars/swagger-ui/**
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui/index.html

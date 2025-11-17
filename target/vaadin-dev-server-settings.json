@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/home/alutarb/Projects/gopizza/./src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/home/alutarb/Projects/gopizza/./src/main/frontend/generated/jar-resources",
+  "staticOutput": "/home/alutarb/Projects/gopizza/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/home/alutarb/Projects/gopizza/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/home/alutarb/Projects/gopizza/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/home/alutarb/Projects/gopizza/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/home/alutarb/Projects/gopizza/target/dev-bundle/config",
+  "jarResourcesFolder": "/home/alutarb/Projects/gopizza/./src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "/home/alutarb/Projects/gopizza/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
