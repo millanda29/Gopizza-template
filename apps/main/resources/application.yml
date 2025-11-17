@@ -10,6 +10,9 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27027/gopizza
+      host: localhost
+      port: 27027
+      database: gopizza
 
   rabbitmq:
     host: localhost
